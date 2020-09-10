@@ -2,6 +2,9 @@
 
 default_config:
 
+lovelace:
+  mode: yaml
+
 tts:
   - platform: google_translate
 

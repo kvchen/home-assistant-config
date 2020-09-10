@@ -1,0 +1,34 @@
+views:
+  - path: overview
+    title: Overview
+    icon: "mdi:view-dashboard"
+    cards:
+      - type: weather-forecast
+        entity: weather.home
+      - title: Lights
+        type: entities
+        show_header_toggle: true
+        entities:
+          - entity: light.office_accent_lights
+          - entity: switch.flux
+      - type: vertical-stack
+        cards:
+          - entities:
+              - entity: sensor.garage_temperature
+            icon: "mdi:thermometer"
+            name: Temperature
+            type: "custom:mini-graph-card"
+          - entities:
+              - entity: sensor.garage_humidity
+            icon: "mdi:water"
+            name: Humidity
+            type: "custom:mini-graph-card"
+          - entities:
+              - entity: sensor.garage_pressure
+            icon: "mdi:gauge"
+            name: Pressure
+            type: "custom:mini-graph-card"
+      - title: Garage
+        type: entities
+        entities:
+          - entity: cover.garage_door
