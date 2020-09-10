@@ -1,0 +1,4 @@
+- platform: travisci
+  api_key: !secret travis_ci
+  repository:
+    - "kvchen/home-assistant-config"

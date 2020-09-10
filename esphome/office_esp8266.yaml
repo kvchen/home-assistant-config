@@ -28,4 +28,3 @@ sensor:
     name: "Office Uptime"
   - platform: wifi_signal
     name: "Office WiFi Strength"
-    update_interval: 60s
