@@ -1,0 +1,7 @@
+test_notification_script:
+  alias: Test Notification Script
+  mode: single
+  sequence:
+    - data:
+        message: Test notification!
+      service: notify.mobile_devices

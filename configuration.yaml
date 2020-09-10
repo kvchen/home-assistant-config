@@ -1,0 +1,15 @@
+# Basic configuration
+
+default_config:
+
+tts:
+  - platform: google_translate
+
+# Includes
+
+automation: !include automations.yaml
+group: !include groups.yaml
+light: !include lights.yaml
+notify: !include notifications.yaml
+scene: !include scenes.yaml
+script: !include scripts.yaml

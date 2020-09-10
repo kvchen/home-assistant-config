@@ -1,0 +1,31 @@
+esphome:
+  name: office_esp8266
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+light:
+  - platform: fastled_clockless
+    chipset: WS2812B
+    pin: D8
+    num_leds: 80
+    rgb_order: GRB
+    name: "Office Shelf Backlight"
+
+sensor:
+  - platform: uptime
+    name: "Office Uptime"
+  - platform: wifi_signal
+    name: "Office WiFi Strength"
+    update_interval: 60s

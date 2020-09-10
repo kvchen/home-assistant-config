@@ -1,0 +1,16 @@
+- id: trash_day_notification
+  alias: Trash day notification
+  description: Notify me to take out the trash on Sunday evening
+  trigger:
+    - event: sunset
+      offset: -00:30:00
+      platform: sun
+  condition:
+    - condition: time
+      weekday:
+        - sun
+  action:
+    - data:
+        message: Time to take out the trash!
+      service: notify.mobile_devices
+  mode: single

@@ -1,0 +1,10 @@
+language: python
+cache: pip
+python:
+  - "3.8"
+install:
+  - "pip3 install -r requirements.txt"
+script:
+  - "mv secrets.yaml.sample secrets.yaml"
+  - "hass --version"
+  - "hass -c . --script check_config

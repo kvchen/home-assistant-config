@@ -1,0 +1,3 @@
+- platform: group
+  name: mobile_devices
+  services: !secret mobile_devices
