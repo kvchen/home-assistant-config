@@ -7,4 +7,4 @@ install:
 script:
   - "mv secrets.yaml.sample secrets.yaml"
   - "hass --version"
-  - "hass -c . --script check_config
+  - "hass -c . --script check_config"
